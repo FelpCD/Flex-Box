@@ -1,0 +1,53 @@
+.conteiner_stretch{
+    align-content: stretch;
+}
+.conteiner_flex-start{
+    align-content: flex-start;
+}
+.conteiner_flex-end{
+    align-content: flex-end;
+}
+.conteiner_center{
+    align-content: center;
+}
+.conteiner_space-between{
+    align-content: space-between;
+}
+.conteiner_space-around{
+    align-content: space-around;
+}
+.conteiner_space-evenly{
+    align-content: space-evenly;
+}
+
+
+
+
+/*Configurações GERAIS*/
+section{
+    max-width: 420px;
+    height: 300px;
+    margin: auto;
+    border: 1px solid rgba(0, 0, 0, 0.459);
+    display: flex;
+    flex-wrap: wrap;
+}
+.item {
+    flex: 1; /* O flex: 1; é necessário para que cada item se expanda ocupando o tamanho máximo do container. */
+    margin: 5px;
+    padding: 0 10px;
+    background: tomato;
+    text-align: center;
+    font-size: 1.5em;
+}
+h1 {
+    text-align: center;
+    margin: 20px 0 0 0;
+    font-size: 1.25em;
+    font-weight: normal;
+}
+
+body {
+    font-family: sans-serif;
+    color: #333;
+}

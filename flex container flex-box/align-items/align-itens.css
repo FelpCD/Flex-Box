@@ -1,0 +1,84 @@
+.conteiner_stretch{
+    display: flex;
+    align-items: stretch;
+}
+.conteiner_flex-start{
+    display: flex;
+    align-items: flex-start;
+}
+.conteiner_flex-end{
+    display: flex;
+    align-items: flex-end;
+}
+.conteiner_center{
+    display: flex;
+    align-items: center;
+}
+.conteiner_baseline{
+    display: flex;
+    align-items: baseline;
+}
+
+.container_flex-start_column{
+    flex-direction: column; 
+    display: flex; 
+    align-items: flex-start;
+}
+.container_flex-end_column{
+    flex-direction: column; 
+    display: flex; 
+    align-items: flex-end;
+}
+.container_center_column{
+    flex-direction: column; 
+    display: flex; 
+    align-items: center;
+}
+
+
+/*Para o alinhamento central no eixo cross axis e main exis*/
+#alinhamento_central{
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#item{
+    flex: 0;  /* O flex: 0; é necessário para que o flex item não expanda. */
+
+    margin: 5px;
+    padding: 0 10px;
+    background: tomato;
+    text-align: center;
+    font-size: 1.5em; 
+}
+
+
+/*Configurações "Gerais"*/
+section{
+    max-width: 420px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+}
+.item:first-child{
+    padding-top: 20px;
+}
+.item{
+    flex: 1; /* O flex: 1; é necessário para que cada item se expanda ocupando o tamanho máximo do container. */
+
+    margin: 5px;
+    padding: 0 10px;
+    background: tomato;
+    text-align: center;
+    font-size: 1.5em;
+}
+h1 {
+    text-align: center;
+    margin: 20px 0 0 0;
+    font-size: 1.25em;
+    font-weight: normal;
+}
+body{
+    font-family: sans-serif;
+    color: #333;
+}

@@ -1,0 +1,53 @@
+.conteiner_flex-start{
+    display: flex;
+    justify-content: flex-start;
+} /*Alinha o item no inicio do contêiner*/
+
+.conteiner_flex-end{
+    display: flex;
+    justify-content: flex-end;
+}/*Alinha o item no final do contêiner*/
+
+.conteiner_center{
+    display: flex;
+    justify-content: center;
+}/*Alinha o item no centro do contêiner*/
+
+.conteiner_space-between{
+    display: flex;
+    justify-content: space-between;
+}/*Cria um espaçamento igual entre os elementos. Mantendo o primeiro grudado no início e o último no final.*/
+
+.conteiner_space-around{
+    display: flex;
+    justify-content: space-around;
+}/*Cria um espaçamento entre os elementos. Os espaçamentos do meio são duas vezes maiores que o inicial e final*/
+
+.conteiner_space-evenly{
+    display: flex;
+    justify-content: space-evenly;
+}/*Cria um espaçamento entre os elementos. Os espaçamentos entre todos os elementos são iguais.*/
+
+
+/* Configurações gerais*/
+.item{
+    margin: 5px;
+    padding: 0 10px;
+    background: tomato;
+    text-align: center;
+    font-size: 1.5em;
+}
+section{
+    border: 1px solid rgba(0, 0, 0, 0.452);
+    max-width: 400px;
+    margin: auto;
+}
+h1{
+    text-align: center;
+    margin: 32px 0px 5px;
+    font-size: 1.25em;
+    font-weight: normal
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;    
+}
