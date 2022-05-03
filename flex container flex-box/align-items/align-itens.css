@@ -19,6 +19,9 @@
     align-items: baseline;
 }
 
+
+/*align-items + flex-direction: column*/
+
 .container_flex-start_column{
     flex-direction: column; 
     display: flex; 
@@ -56,6 +59,7 @@
 
 /*Configurações "Gerais"*/
 section{
+    min-height: 150px;
     max-width: 420px;
     margin: 0 auto;
     border: 1px solid #ccc;

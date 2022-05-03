@@ -1,23 +1,23 @@
 .conteiner_stretch{
-    align-content: stretch;
+    align-content: stretch; /*Valor padrão, ele que faz com que os flex itens cresçam igualmente na vertical.*/
 }
 .conteiner_flex-start{
-    align-content: flex-start;
+    align-content: flex-start; /*Alinha todas as linhas de itens ao início.*/
 }
 .conteiner_flex-end{
-    align-content: flex-end;
+    align-content: flex-end; /*Alinha todas as linhas de itens ao final.*/
 }
 .conteiner_center{
-    align-content: center;
+    align-content: center; /*Alinha todas as linhas de itens ao centro.*/
 }
 .conteiner_space-between{
-    align-content: space-between;
+    align-content: space-between; /*Cria um espaçamento igual entre as linhas. Mantendo a primeira grudada no topo e a última no bottom.*/
 }
 .conteiner_space-around{
-    align-content: space-around;
+    align-content: space-around; /*Cria um espaçamento entre as linhas. Os espaçamentos do meio são duas vezes maiores que o top e bottom.*/
 }
 .conteiner_space-evenly{
-    align-content: space-evenly;
+    align-content: space-evenly; /*Cira um espaçamento igual entre as linhas*/
 }
 
 
@@ -29,8 +29,9 @@ section{
     height: 300px;
     margin: auto;
     border: 1px solid rgba(0, 0, 0, 0.459);
+
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /*Os CONTEINER (Pai) precisa ter o flex-wrap: wrap; para funcionar*/
 }
 .item {
     flex: 1; /* O flex: 1; é necessário para que cada item se expanda ocupando o tamanho máximo do container. */
@@ -50,4 +51,19 @@ h1 {
 body {
     font-family: sans-serif;
     color: #333;
+}
+
+
+
+
+#conteine_img{
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+img{
+    padding: 5px;
+    height: 90px;
+    width: 150px;
 }

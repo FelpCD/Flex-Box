@@ -29,6 +29,42 @@
 }/*Cria um espaçamento entre os elementos. Os espaçamentos entre todos os elementos são iguais.*/
 
 
+/*justify-content + flex-direction: column;*/
+.column{
+    min-height: 230px;
+}
+.conteiner_flex-start_column{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.conteiner_flex-end_column{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+.conteiner_center_column{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.conteiner_space-between_column{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.conteiner_space-around_column{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.conteiner_space-evenly_column{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+
 /* Configurações gerais*/
 .item{
     margin: 5px;
