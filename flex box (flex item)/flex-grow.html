@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>flex-grow</title>
+    <style>
+ 
+ /*Flex item (Filho)*/
+        .grow0{
+            flex-grow: 0; /* Os itens não se expandem para ocupar o container. */
+        }
+        .grow1{
+            flex-grow: 1; /*Os itens se sexpandem para tentar ocupar o máximo possível do conteine, o crescimento é distribuído igualmente antes e depois do conteúdo de cada elemento. */
+        }
+        .grow2{
+            flex-grow: 2; /* Os itens se expandem duas vezes mais que aqueles com flex-grow: 1; */
+        }
+
+        /*Esses pertence ao flex-grow misturado para exemplificar*/
+        .grow3{
+            flex-grow: 3;
+        }
+        .grow4{
+            flex-grow: 4;
+        }
+
+
+
+ /*Configurações gerais*/
+    .item {
+        margin: 5px;
+        background: tomato;
+        text-align: center;
+        font-size: 1.5em;
+    }
+    /*flex conteiner (Pai)*/
+    .container {
+        max-width: 400px;
+        margin: 0 auto;
+        display: flex; /*O display flex vai no conteiner(Pai) e a outeração vai no item(Filho)*/
+        border: 1px solid #ccc;
+    }   
+
+    h1 {
+        text-align: center;
+        margin: 20px 0 0 0;
+        font-size: 1.25em;
+        font-weight: normal;
+    }
+
+    body {
+        font-family: monospace;
+        color: #333;
+    }
+    </style>
+</head>
+<body>
+        <h1>flex-grow: 0;</h1>
+    <section class="container">
+        <div class="item grow0">1</div>
+        <div class="item grow0">2</div>
+        <div class="item grow0">3</div>
+        <div class="item grow0">4</div>
+    </section>
+
+    <h1>flex-grow: 1;</h1>
+    <section class="container">
+        <div class="item grow1">1</div>
+        <div class="item grow1">2</div>
+        <div class="item grow1">3</div>
+        <div class="item grow1">4</div>
+    </section>
+
+    <h1>flex-grow: 2;</h1>
+    <section class="container column">
+        <div class="item grow2">1</div>
+        <div class="item grow2">2</div>
+        <div class="item grow2">3</div>
+        <div class="item grow2">4</div>
+    </section>
+
+    <h1>flex-grow: 1; // conteúdo largo</h1>
+    <section class="container column-reverse">
+        <div class="item grow1">1</div>
+        <div class="item grow1">TestandoTestando2</div>
+        <div class="item grow1">3</div>
+        <div class="item grow1">teste4</div>
+    </section>
+
+    <h1>flex-grow: (misturado);</h1>
+    <section class="container column-reverse">
+        <div class="item grow0">1</div>
+        <div class="item grow1">2</div>
+        <div class="item grow2">3</div>
+        <div class="item grow3">4</div>
+        <div class="item grow4">5</div>
+    </section>
+</body>
+</html>
