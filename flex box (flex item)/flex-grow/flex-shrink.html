@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-shrink</title>
+    <style>
+    .shrink0{ /*Não diminui*/
+        flex-shrink: 0;
+        flex-basis: 100px;
+    }
+    .shrink1{ /*Diminui*/
+        flex-shrink: 1; 
+        flex-basis: 100px;
+    }
+    .shrink2{ /*Diminui 2x mais que flex-shrink: 1*/
+        flex-shrink: 2;
+        flex-basis: 100px;
+    }
+    .shrink3{ /*Diminui 3x mais que flex-shrink: 1*/
+        flex-shrink: 3;
+        flex-basis: 100px;
+    }
+    .container-misturado{
+        max-width: 300px;
+        margin: 0 auto;
+        display: flex; /*Para usar as propriedades de flex item o container deve ser display flex*/
+        border: 1px solid #ccc;
+    }
+    
+    
+
+
+
+
+
+    .flex-shrink0{ /*com o flex-shrink: 0; não permite a diminuição dos itens, ou seja, eles vão quebrar o container, assim um item com flex-basis: 300px; nunca diminuirá menos do que 300px, mesmo que o conteúdo não ocupe todo esse espaço.*/
+        flex-shrink: 0;
+        flex-basis: 100px;
+    }
+
+    .flex-shrink1{ /*quando eu tenho uma redição do containe os itens diminuem (se ajusta) para caber no container*/
+        
+        flex-shrink: 1; /*Padrão mesmo quando não definido*/
+        flex-basis: 100px; /*Mesmo seu estiver defindo um width ou um flex-basis com o tamanho em px*/ 
+    }
+    .item {
+        margin: 5px;
+        background: tomato;
+        text-align: center;
+        font-size: 1.5em;
+
+}
+    .container {
+        max-width: 400px;
+        margin: 0 auto;
+        display: flex; /*Para usar as propriedades de flex item o container deve ser display flex*/
+        border: 1px solid #ccc;
+}
+    h1 {
+        text-align: center;
+        margin: 20px 0 0 0;
+        font-size: 1.25em;
+        font-weight: normal;
+    }
+
+    body {
+        font-family: monospace;
+        color: #333;
+    }
+    </style>
+</head>
+<body>
+    <h1>flex-shrink: 1;</h1>
+    <section class="container">
+        <div class="item flex-shrink1">1</div>
+        <div class="item flex-shrink1">2</div>
+        <div class="item flex-shrink1">3</div>
+        <div class="item flex-shrink1">4</div>
+    </section>
+
+    <h1>flex-shrink: 0;</h1>
+    <section class="container">
+        <div class="item flex-shrink0">1</div>
+        <div class="item flex-shrink0">2</div>
+        <div class="item flex-shrink0">3</div>
+        <div class="item flex-shrink0">4</div>
+    </section>
+
+    <h1>flex-shrink: Com número;</h1>
+    <section class="container-misturado">
+        <div class="item shrink0">1</div>
+        <div class="item shrink1">2</div>
+        <div class="item shrink2">3</div>
+        <div class="item shrink3">4</div>
+    </section>
+</body>
+</html>
