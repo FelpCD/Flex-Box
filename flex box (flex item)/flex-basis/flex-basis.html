@@ -5,10 +5,79 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flax-basis</title>
+    <style>
+        /*flex-basis: auto;*/
+
+        .basis-auto{
+            flex-grow: 1;
+            flex-basis: auto;
+        }
+        .basis-auto-grow-2{
+            flex-grow: 2;
+            flex-basis: auto;
+        }
+        .basis-auto-width{
+            flex-grow: 1;
+            flex-basis: auto;
+            width: 60px;
+        }
+        .basis-auto-grow-0{
+            flex-grow: 0;
+            flex-basis: auto;
+        }
+
+        /*flex-basis: 0;*/
+
+        .flex-basis0{ /* flax-basis: 0; Vai tentar manter os itens do mesmo tamanho independente do conteúdo*/
+            flex-grow: 1;
+            flex-basis: 0;
+        }
+
+        /*configurações gerais*/
+        .item {
+            margin: 5px;
+            background: tomato;
+            text-align: center;
+            font-size: 1.5em;
+            
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            display: flex; /*Para usar as propriedades de flex item o conteiner deve ser display flex*/
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px 0 0 0;
+            font-size: 1.25em;
+            font-weight: normal;
+        }
+
+        body {
+            font-family: monospace;
+            color: rgb(43, 43, 43);
+        }
+        
+
+    </style>
 </head>
 <body>
-    <section>
-        <div></div>
+    <h1>flex-basis: auto;</h1>
+    <section class="container">
+        <div class="item basis-auto">Palavra1</div>
+        <div class="item basis-auto">2</div>
+        <div class="item basis-auto-grow-2">3</div>
+        <div class="item basis-auto-width">4</div>
+        <div class="item basis-auto-grow-0">5</div>
+    </section>
+    
+    <h1>flex-basis: 0;</h1>
+    <section class="container">
+        <div class="item flex-basis0">1</div>
+        <div class="item flex-basis0">palavra</div>
+        <div class="item flex-basis0">3</div>
     </section>
 </body>
 </html>
